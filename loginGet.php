@@ -2,7 +2,8 @@
 	//start session
 	session_start();
 	$userName = (String)$_GET["userName"];
-	$readFile = fopen("user.txt", "r");
+	$_SESSION["userDirPath"] = "/home/amprince/userfiles/";
+	$readFile = fopen($_SESSION["userDirPath"]."user.txt", "r");
 	$lineNum = 1;
 	// check if user name was entered
 	if(isset($_GET["login"]) && !empty($userName)){
@@ -20,7 +21,5 @@
 	fclose($readFile);
 
 	}
-
-//echo $_SESSION["userName"];
 
  ?>
