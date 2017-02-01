@@ -30,7 +30,8 @@
     header("Content-Type: ".$mime);
     readfile($full_path);*/
 
-     ?> <br>
+     ?>
+
 
   </body>
 </html>
