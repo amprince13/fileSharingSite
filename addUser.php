@@ -5,11 +5,11 @@ if (isset($_GET["newUser"])) {
   $_SESSION["userDirPath"] = "/home/amprince/userfiles/";
   $full_path = "/home/amprince/userfiles/".$newUser;
   $writeFilePath = "/home/amprince/userfiles/user.txt";
-  $writeFile = fopen($writeFilePath, "w");
-  fwrite($writeFile, $newUser);
+  file_put_contents($writeFilePath, $newUser."\n", FILE_APPEND);
   mkdir($full_path);
-  echo $newUser;
-  //header("Location: fileMain.php");
-  //exit;
+  $_GET["userName"] = "";
+  header("Location: loginPage.html");
+  exit;
+
 }
  ?>

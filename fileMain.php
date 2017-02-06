@@ -25,7 +25,7 @@
         }
       }
       // Allows the user to delete files through deletePrep.php
-      echo "<br>Click below too delete files";
+      echo "<br>Click below to delete files";
       printf("<form action=deletePrep.php method=get>");
       printf("<input type=submit value=Delete name=deletePrep><br></form>");
 
@@ -36,9 +36,9 @@
     	printf("<input type=file name=uploadedfile>");
     	printf("<input type=submit name=uploadFile></form>");
 
-      //echo "<br>Click below to add user";
-      //printf("<form action=addUser.php method=get>");
-      //printf("<input type=submit value=Add name=newUser<br></form>");
+      echo "<br>Click below to delete your account";
+      printf("<form action=deleteUser.php method=get>");
+      printf("<input type=submit value=Delete User name=deleteUser<br></form>");
 
 
 
