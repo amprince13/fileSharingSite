@@ -8,7 +8,7 @@ if (is_dir($userPath)) {
       printf("<form action=deleteFile.php method=get>");
       while (($file = readdir($dh)) !== false) {
         if (!(trim($file) == "..") && !(trim($file) == ".")) {
-          printf("<input type=radio value=%s name=name> ", $file);
+          printf("<input type=radio value=%s name='Delete'> ", $file);
           printf("%s<br>", $file);
         }
       }
